@@ -24,6 +24,7 @@ $xy				sexy
 1dering				wondering
 1nce				once
 1sec				one second
+2				too
 2b				to be
 2bad4u2				too bad for you too
 2bh				to be honest
@@ -83,6 +84,7 @@ $xy				sexy
 3u				thank you
 3vi1				evil
 3y3 y4m				I am
+4				for
 404				Clueless
 42n8				fortunate
 4311				hell
@@ -451,8 +453,7 @@ bf4l				best friends for life
 bfam				brother from another mother
 bfd				big fucking deal
 bfe				Bum Fuck Egypt
-bff				bes        self.four=["4","four","for","fore","a"]
-t friend forever
+bff				best friend forever
 bffa				best friends for always
 bffaa				Best Friends Forever And Always
 bffae				Best Friends Forever And Ever
