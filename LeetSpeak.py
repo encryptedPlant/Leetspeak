@@ -259,7 +259,7 @@ class LeetSpeak:
                     if self.jargon.Contains(valid) == True:
                         value=2
                         jargon=self.jargon.Translate(valid)
-                        
+                        print(jargon)
                         if self.dictionary.Contains(jargon) == True:
                             value=4
                         
@@ -303,6 +303,7 @@ class LeetSpeak:
                             check.append(valid)
                 if len(check)==0 and skip == 0:
                     check.append(englishwords[0])
+                print(englishwords.items())
                 #append the corrected version, hopefully
                 for item in check:
                     corrected=self.spelling.Check(item,dictionary=True,fast=True)
