@@ -67,7 +67,7 @@ class LeetSpeak:
         self.eight=["8","eight","b"]
         self.nine=["9","nine","g"]
         
-        
+        #"0":self.zero,"1":self.one,"2":self.two,"3":self.three,"4":self.four,"5":self.five,"6":self.six,"7":self.seven,"8":self.eight,"9":self.nine
         self.alphabet={"a":self.a, "b":self.b, "c":self.c, "d":self.d, "e":self.e, "f":self.f, "g":self.g, "h":self.h, "i":self.i, "j":self.j, "k":self.k, "l":self.l, "m":self.m, "n":self.n, "o":self.o, "p":self.p, "q":self.q, "r":self.r, "s":self.s, "t":self.t, "u":self.u, "v":self.v, "w":self.w, "x":self.x, "y":self.y, "z":self.z, "0":self.zero,"1":self.one,"2":self.two,"3":self.three,"4":self.four,"5":self.five,"6":self.six,"7":self.seven,"8":self.eight,"9":self.nine}
 
     def ConvertToLeet(self,text):
@@ -221,17 +221,24 @@ class LeetSpeak:
             #append the actual "word" if it is less than 8 characters, since it might be a single letter (e.g. "n" for "and")
             if len(word) <= 8:
                 possibilities.append([word.lower()])
+            #print('possibilities ', possibilities)
             
             #calculate what this could be in leet (if it can be anything)
             validwords=[]
             for possibility in possibilities:
+                #print(possibility)
                 letters=[]
                 valid=1
                 for char in possibility:
+                    #print(char)
                     chars=[]
+                    # if self.jargon.Contains(char) == True:
+                    #     chars.append(let)
+
                     for let,val in self.alphabet.items():
                         if char in val:
                             chars.append(let)
+                      
                     if len(chars) == 0:
                         valid=0
                         break
@@ -239,13 +246,16 @@ class LeetSpeak:
                        letters.append(chars)
                    
                     del chars
+                    
+
                 if valid==1 and len(letters) > 0:
                     #generate possible words from given letters
                     words=self.rec_scan_array(letters)
                     validwords+=words
                     del words
             
-            #print(validwords)
+                    
+            #print('validwords ', validwords)
             
             #check which valid words are english if there's more than one option
             #go with the most frequently used english word
@@ -259,7 +269,7 @@ class LeetSpeak:
                     if self.jargon.Contains(valid) == True:
                         value=2
                         jargon=self.jargon.Translate(valid)
-                        print(jargon)
+                        #print(jargon)
                         if self.dictionary.Contains(jargon) == True:
                             value=4
                         
@@ -303,7 +313,7 @@ class LeetSpeak:
                             check.append(valid)
                 if len(check)==0 and skip == 0:
                     check.append(englishwords[0])
-                print(englishwords.items())
+                #print(englishwords.items())
                 #append the corrected version, hopefully
                 for item in check:
                     corrected=self.spelling.Check(item,dictionary=True,fast=True)
