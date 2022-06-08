@@ -9,7 +9,7 @@ class Dictionary():
         if dict_type in self.types:
             filename=self.types[dict_type]
             
-            with open('words/'+filename, encoding='utf-8') as dictionary_file:
+            with open('/content/Leetspeak/words/'+filename, encoding='utf-8') as dictionary_file:
                 for line in dictionary_file:
                     words=line.replace("\n","").split("\t")
                     length=len(words)
