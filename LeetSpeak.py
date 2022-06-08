@@ -67,8 +67,8 @@ class LeetSpeak:
         self.eight=["8","eight","b"]
         self.nine=["9","nine","g"]
         
-        #"0":self.zero,"1":self.one,"2":self.two,"3":self.three,"4":self.four,"5":self.five,"6":self.six,"7":self.seven,"8":self.eight,"9":self.nine
-        self.alphabet={"a":self.a, "b":self.b, "c":self.c, "d":self.d, "e":self.e, "f":self.f, "g":self.g, "h":self.h, "i":self.i, "j":self.j, "k":self.k, "l":self.l, "m":self.m, "n":self.n, "o":self.o, "p":self.p, "q":self.q, "r":self.r, "s":self.s, "t":self.t, "u":self.u, "v":self.v, "w":self.w, "x":self.x, "y":self.y, "z":self.z}
+        
+        self.alphabet={"a":self.a, "b":self.b, "c":self.c, "d":self.d, "e":self.e, "f":self.f, "g":self.g, "h":self.h, "i":self.i, "j":self.j, "k":self.k, "l":self.l, "m":self.m, "n":self.n, "o":self.o, "p":self.p, "q":self.q, "r":self.r, "s":self.s, "t":self.t, "u":self.u, "v":self.v, "w":self.w, "x":self.x, "y":self.y, "z":self.z, "0":self.zero,"1":self.one,"2":self.two,"3":self.three,"4":self.four,"5":self.five,"6":self.six,"7":self.seven,"8":self.eight,"9":self.nine}
 
     def ConvertToLeet(self,text):
         """
