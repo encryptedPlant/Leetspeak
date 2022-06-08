@@ -7,8 +7,8 @@ from Dictionary import Dictionary
 class Spelling:
     def __init__(self):
         self.alphabet='abcdefghijklmnopqrstuvwxyz'
-        self.guten="data/gutenburg_small.txt"
-        self.guten_pickle="data/gutenburg_small.pickle"
+        self.guten="/content/Leetspeak/data/gutenburg_small.txt"
+        self.guten_pickle="/content/Leetspeak/data/gutenburg_small.pickle"
         #self.american="words/american-english"
         self.gutenburg={}
         self.learned={}
